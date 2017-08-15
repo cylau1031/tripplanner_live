@@ -1,0 +1,32 @@
+{
+  "name": "tripplanner-static",
+  "version": "1.0.0",
+  "description": "cool app",
+  "main": "app.js",
+  "scripts": {
+    "start:production": "node theServerFilename",
+    "start:dev": "nodemon -e html,css,js app.js",
+    "start": "npm run start:dev",
+    "build:css": "node-sass -w -r assets/stylesheets -o public/stylesheets",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tripplanner"
+  ],
+  "author": "all of us",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.4",
+    "jquery": "^3.2.1",
+    "nunjucks": "^3.0.1",
+    "pg": "^7.1.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.4.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.8.2",
+    "node-sass": "^4.5.3"
+  }
+}
