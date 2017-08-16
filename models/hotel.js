@@ -1,5 +1,6 @@
 const db = require('./_db')
 const Sequelize = require('sequelize')
+const Place = require('./place.js')
 
 const Hotel = db.define('hotel', {
 	name: {
@@ -11,12 +12,16 @@ const Hotel = db.define('hotel', {
 			min: 0.0,
 			max: 5.0
 		}
-		// the point of range is to be able to do overlaps, joins, etc. 
-	}, 
+		// the point of range is to be able to do overlaps, joins, etc.
+	},
 	amenities: {
 		type: Sequelize.STRING
 	}
-}, {})
+}, {
+	defaultScope: {
+		include: [Place]
+	}
+})
 
 
 module.exports = Hotel

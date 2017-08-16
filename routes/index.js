@@ -7,6 +7,7 @@ const Hotel = db.models.hotel
 
 router.get('/', function(req, res, next){
 
+
 	const findingHotels = Hotel.findAll()
 	const findingRestaurants = Restaurant.findAll()
 	const findingActivities = Activity.findAll()
@@ -20,6 +21,10 @@ router.get('/', function(req, res, next){
 			})
 		})
 
+		// console.log($(hotels))
+		// $(hotels).each(function(hotel) {
+		// 	$('#hotel-choices').append('<option>Hi</option>')
+		// })
 })
 
 module.exports = router
